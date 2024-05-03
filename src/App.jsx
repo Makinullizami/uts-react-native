@@ -13,11 +13,12 @@ const Tabs = createBottomTabNavigator();
 
 const MenuTab = () => {
   return (
-    <Tabs.Navigator screenOptions={{tabBarActiveTintColor: '#0BF7E0'}}>
+    <Tabs.Navigator screenOptions={{tabBarActiveTintColor: '#FFB266'}}>
       <Tabs.Screen
         name="Home"
         component={Home}
         options={{
+          headerShown: false,
           tabBarIcon: ({size, color}) => (
             <MaterialCommunityIcons name="home" size={size} color={color} />
           ),
@@ -27,6 +28,7 @@ const MenuTab = () => {
         name="Makanan"
         component={Makanan}
         options={{
+          headerShown: false,
           tabBarIcon: ({size, color}) => (
             <MaterialCommunityIcons
               name="hamburger"
@@ -40,6 +42,7 @@ const MenuTab = () => {
         name="Minuman"
         component={Minuman}
         options={{
+          headerShown: false,
           tabBarIcon: ({size, color}) => (
             <MaterialCommunityIcons name="coffee" size={size} color={color} />
           ),
