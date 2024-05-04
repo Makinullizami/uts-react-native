@@ -26,7 +26,7 @@ const Makanan = [
   {id: 10, nama: 'Siomay'},
 ];
 
-const Home = ({}) => {
+const Home = ({navigation}) => {
   return (
     <ImageBackground
       source={require('../image/background.jpeg')}
@@ -38,20 +38,25 @@ const Home = ({}) => {
               <Text style={styles.header}>CafeKita</Text>
             </View>
             <Image
-              source={require('../image/judul.jpeg')}
+              source={require('../image/atas.jpeg')}
               style={{
                 width: 300,
                 height: 150,
                 marginTop: 15,
                 marginLeft: 45,
-                borderRadius: 20,
+                borderBottomLeftRadius: 70,
+                borderTopRightRadius: 70,
+                borderBottomRightRadius: 20,
+                borderTopLeftRadius: 20,
+                borderWidth: 5,
+                borderColor: '#FF9933',
               }}
             />
           </View>
         </View>
-        <View>
+        <TouchableOpacity onPress={() => navigation.navigate('Minuman')}>
           <Text style={styles.txt}>Minuman</Text>
-        </View>
+        </TouchableOpacity>
         <FlatList
           data={Minuman}
           renderItem={({item}) => <Component label={item.label} />}
@@ -71,9 +76,9 @@ const Home = ({}) => {
             style={styles.menu}
           />
         </View>
-        <View>
+        <TouchableOpacity onPress={() => navigation.navigate('Makanan')}>
           <Text style={styles.txt}>Makanan</Text>
-        </View>
+        </TouchableOpacity>
         <FlatList
           data={Makanan}
           renderItem={({item}) => <Component nama={item.nama} />}
