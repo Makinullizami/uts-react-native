@@ -29,7 +29,7 @@ const Makanan = [
 const Home = ({navigation}) => {
   return (
     <ImageBackground
-      source={require('../image/background.jpeg')}
+      source={'../image/backgrond.jpeg'}
       style={{width: '100%', height: '100%'}}>
       <View>
         <View style={{width: 393, height: 230}}>
